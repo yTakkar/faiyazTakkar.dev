@@ -1,0 +1,165 @@
+// SASS import
+@import './mixins';
+@import './fonts';
+
+// Tailwind import
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .content {
+    @apply max-w-xl pb-24;
+  }
+
+  .link {
+    @apply border-b border-dashed border-blue-500 font-bold text-blue-500;
+  }
+}
+
+:root {
+  // Backgrounds
+  --primary: #{hexToRGBString(#fff)};
+  --primary-2: #{hexToRGBString(#f3f4f6)};
+
+  --secondary: #{hexToRGBString(#1e1e1e)};
+  --secondary-2: #{hexToRGBString(#404040)};
+
+  // Texts
+  --text-primary: #{hexToRGBString(#1e1e1e)};
+  --text-primary-2: #{hexToRGBString(#9ca3af)};
+
+  --text-secondary: #{hexToRGBString(#fff)};
+  --text-secondary-2: #{hexToRGBString(#9ca3af)};
+
+  // Border
+  --border-primary: #{hexToRGBString(#f3f4f6)};
+
+  --loding-indicator: #40f9ff;
+}
+
+.dark {
+  // Backgrounds
+  --primary: #{hexToRGBString(#1e1e1e)};
+  --primary-2: #{hexToRGBString(#404040)};
+
+  --secondary: #{hexToRGBString(#fff)};
+  --secondary-2: #{hexToRGBString(#f3f4f6)};
+
+  // Texts
+  --text-primary: #{hexToRGBString(#fff)};
+  --text-primary-2: #{hexToRGBString(#9ca3af)};
+
+  --text-secondary: #{hexToRGBString(#1e1e1e)};
+  --text-secondary-2: #{hexToRGBString(#9ca3af)};
+
+  // Border
+  --border-primary: #{hexToRGBString(#3f3f46)};
+}
+
+html,
+body {
+  @apply m-0 box-border h-full touch-manipulation bg-primary p-0;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply relative min-h-full antialiased;
+  line-height: 1.5;
+}
+
+#__next {
+  @apply isolate mx-auto flex h-full w-full max-w-7xl flex-col justify-center scroll-smooth;
+}
+
+main {
+  @apply min-h-full w-full scroll-smooth bg-primary p-5 text-primary lg:py-8 lg:pl-80;
+}
+
+a {
+  @apply inline-block text-inherit;
+  text-decoration: none;
+}
+
+* {
+  @apply box-border;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  @apply h-full w-full select-none;
+}
+
+.profileImage {
+  @apply relative mx-auto flex max-h-[500px] w-full max-w-[540px] shadow-2xl dark:shadow-secondary-2/10 lg:mx-0;
+
+  img {
+    @apply rounded-lg;
+  }
+}
+
+.workImage {
+  @apply relative mx-auto flex max-h-[56px] w-full max-w-[56px] shadow-2xl lg:mx-0;
+
+  img {
+    @apply rounded-lg;
+  }
+}
+
+/* Scrollbar Styles */
+html {
+  @apply scroll-smooth;
+  scrollbar-width: thin;
+  scrollbar-color: RGBA(var(--secondary), 1) transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: RGBA(var(--secondary), 1) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: RGBA(var(--secondary), 1);
+  border-radius: 1px;
+}
+
+/* nprogress.css */
+/* Make clicks pass-through */
+#nprogress {
+  @apply pointer-events-none;
+}
+
+#nprogress .bar {
+  @apply fixed top-0 left-0 w-full;
+  background: var(--loding-indicator);
+  z-index: 1031;
+  height: 2px;
+}
+
+/**
+ * Chrome has a bug with transitions on load since 2012!
+ *
+ * To prevent a "pop" of content, you have to disable all transitions until
+ * the page is done loading.
+ *
+ * https://lab.laukstein.com/bug/input
+ * https://twitter.com/timer150/status/1345217126680899584
+ */
+body.loading * {
+  transition: none !important;
+}
