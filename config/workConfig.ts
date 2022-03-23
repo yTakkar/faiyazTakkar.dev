@@ -59,7 +59,7 @@ const workConfig = {
       ],
     },
     {
-      role: 'Lead Full-Stack Consultant',
+      role: 'Senior Software Engineer',
       company: {
         name: 'Proximity Labs',
         logo: '/images/logos/proximity-labs.jpeg',
