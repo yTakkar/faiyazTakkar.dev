@@ -19,8 +19,8 @@ const workConfig = {
       location: 'Remote',
       experience: {
         from: 'Nov 2020',
-        to: 'Present',
-        total: '',
+        to: 'Apr 2022',
+        total: '1 yr 6 mos',
       },
       highlights: [
         `Parent organization of the world's largest cricket platform.`,
