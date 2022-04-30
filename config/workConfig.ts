@@ -81,7 +81,7 @@ const workConfig = {
         total: '10 mos',
       },
       highlights: [
-        `Proximity's first employee.`,
+        `Proximity's first employee. Founding team member.`,
         `Joined to help rewrite ESPNcricinfo from the ground up.`,
         `Lead core development of ESPNcricinfo.`,
       ],
