@@ -36,8 +36,7 @@ const Home: NextPage<IProps> = props => {
           <p className="">
             A passionate <span className="font-medium font-primary-medium">polygot programmer</span> and an{' '}
             <span className="font-medium font-primary-medium">open-sourcer</span>. I like to build delightful digital
-            products. I believe in choosing the correct tech stack for the job at hand. Looking for a job change right
-            now!
+            products. I believe in choosing the correct tech stack for the job at hand.
           </p>
 
           {/* <p className="mt-6">I like to build delightful digital products. And yes I'm language agnostic.</p> */}
