@@ -1,6 +1,26 @@
 const workConfig = {
   list: [
     {
+      role: 'Builder',
+      company: {
+        name: 'Kognitos',
+        logo: '/images/logos/kognitos.jpeg',
+        urls: [
+          {
+            label: 'Kognitos',
+            href: 'https://www.kognitos.com/',
+          },
+        ],
+      },
+      location: 'Remote',
+      experience: {
+        from: 'May 2022',
+        to: 'Present',
+        total: '',
+      },
+      highlights: [`Building a hyper-automation platform.`],
+    },
+    {
       role: 'Independent Consultant',
       company: {
         name: 'ESPN',
