@@ -39,7 +39,7 @@ const Home: NextPage<IProps> = props => {
             products. I believe in choosing the correct tech stack for the job at hand.
           </p>
 
-          {/* <p className="mt-6">I like to build delightful digital products. And yes I'm language agnostic.</p> */}
+          <p className="mt-6">Open to part-time freelancing opportunities.</p>
 
           <p className="mt-6">
             Learn more about me{' '}
