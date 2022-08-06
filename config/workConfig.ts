@@ -126,7 +126,7 @@ const workConfig = {
       },
       highlights: [
         `Worked on all things front-end for DeltaExchange.`,
-        `We re-architected the entire project to the new stack for realtime performance issues.`,
+        `We re-architected the entire project to a new stack for realtime performance issues.`,
       ],
     },
     {
@@ -156,8 +156,8 @@ const workConfig = {
         `Parent organization of the world's largest matrimonial platform.`,
         `Initially worked on Shaadi.com's vernacular project.`,
         `Was part of Sangam.com's core front-end team.`,
-        `Helped migrate all legacy pages to the new stack.`,
-        `Worked on features end-to-end from FE to BE.`,
+        `Helped migrate all legacy pages to a new stack.`,
+        `Worked on requirements end-to-end.`,
         `Also developed testing tools for QA.`,
       ],
     },
@@ -180,7 +180,7 @@ const workConfig = {
         total: '2 yrs',
       },
       highlights: [
-        `Worked primary on open-source projects. Can be found on my GitHub profile.`,
+        `Worked primarily on open-source projects. Can be found on my GitHub profile.`,
         `Built various projects with different tech stack for learning.`,
       ],
     },
