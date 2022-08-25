@@ -21,12 +21,12 @@ const Intro: NextPage<IProps> = props => {
         <div className="text-2xl font-bold font-primary-bold">Detailed introduction</div>
 
         <p className="mt-6">
-          So you might have already learnt about my love for building digital products, but this isn't a newly-found
-          love. I've been learning technology since the age of 12. I'm {age} now.
+          So you might have already noticed my love for building digital products, but this isn't something I was bugged
+          very recently. Infact, I've been learning technology since the age of 12. I'm {age} now.
         </p>
 
         <p className="mt-5">
-          Born and raised in{' '}
+          A college dropout, born and raised in{' '}
           <CoreLink
             url="https://en.wikipedia.org/wiki/Dharavi"
             className="border-dashed border-b border-funBlue text-funBlue"
@@ -34,17 +34,15 @@ const Intro: NextPage<IProps> = props => {
             Dharavi
           </CoreLink>{' '}
           (Asia's largest slum). Started my professional jouney by working at a small-scale Jeans factory for almost a
-          year when I was 17/18.
+          year when I was 17/18. After some stability, I began working on full-stack web applications for learning.
+          Developed various projects with different tech stacks and open-sourced them all. Continued doing this for more
+          than 2 years.
         </p>
 
         <p className="mt-5">
-          After some stability, I began working on full-stack web applications for learning. Developed various projects
-          with different tech stack and open-sourced them all. Did this for more than 2 years.
-        </p>
-
-        <p className="mt-5">
-          Got my first job offer as a front-end developer from People Interactive when I was 19. Job role was to build
-          features end-to-end for users. Learn more about my work experience{' '}
+          Got my first job offer as a front-end developer from People Interactive (shaadi.com) when I was 19. At the
+          moment, I'm a member of Kognitos' technical staff where we're building an AI brain for hyper automation. Learn
+          more about my work experience in detail{' '}
           <CoreLink
             url={getWorkPageUrl()}
             className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
@@ -53,7 +51,7 @@ const Intro: NextPage<IProps> = props => {
           .
         </p>
 
-        <p className="mt-5">My other interests include literature, travelling, economics and history.</p>
+        <p className="mt-5">My other interests include literature, history and philosophy.</p>
       </div>
     </div>
   )

@@ -39,7 +39,7 @@ const Home: NextPage<IProps> = props => {
             products. I believe in choosing the correct tech stack for the job at hand.
           </p>
 
-          <p className="mt-6">Open to part-time freelancing opportunities.</p>
+          {/* <p className="mt-6">Open to part-time freelancing opportunities.</p> */}
 
           <p className="mt-6">
             Learn more about me{' '}
@@ -50,7 +50,7 @@ const Home: NextPage<IProps> = props => {
             </CoreLink>
           </p>
 
-          <p className="mt-6">
+          {/* <p className="mt-6">
             I've recently open-sourced a profitable solution named{' '}
             <CoreLink
               url="https://ownstore.dev"
@@ -59,7 +59,7 @@ const Home: NextPage<IProps> = props => {
               OwnStore
             </CoreLink>{' '}
             for the community. Helps businesses set up their online store instantly with a few configurable projects.
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

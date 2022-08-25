@@ -18,7 +18,7 @@ const workConfig = {
         to: 'Present',
         total: '',
       },
-      highlights: [`Building a hyper-automation platform.`],
+      highlights: [`Building an AI brain for hyper automation.`],
     },
     {
       role: 'Independent Consultant',
