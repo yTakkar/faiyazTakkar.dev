@@ -5,16 +5,12 @@ import { prepareIntroPageSeo } from '../utils/seo/intro'
 import CoreLink from '../components/core/CoreLink'
 import { getWorkPageUrl } from '../utils/work'
 import { BriefcaseIcon } from '@heroicons/react/outline'
-import dayjs from 'dayjs'
-import appConfig from '../config/appConfig'
 
 interface IProps extends IGlobalLayoutProps {
   pageData: {}
 }
 
 const Intro: NextPage<IProps> = props => {
-  const age = dayjs().diff(dayjs(appConfig.global.birthDate), 'year')
-
   return (
     <div className="pt-5 lg:pt-8 lg:ml-72">
       <div className="px-5 md:px-10 pb-20">
@@ -22,7 +18,7 @@ const Intro: NextPage<IProps> = props => {
 
         <p className="mt-6">
           So you might have already noticed my love for building digital products, but this isn't something I was bugged
-          very recently. Infact, I've been learning technology since the age of 12. I'm {age} now.
+          very recently. Infact, I've been learning technology since the age of 12.
         </p>
 
         <p className="mt-5">
