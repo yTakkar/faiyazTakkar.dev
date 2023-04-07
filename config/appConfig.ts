@@ -15,7 +15,7 @@ const appConfig = {
     birthDate: '1998-09-09',
     socialProfiles: {
       twitter: 'https://twitter.com/shtakkar',
-      instagram: 'https://www.instagram.com/_faiyaz_shaikh',
+      instagram: 'https://www.instagram.com/faiyaztakkarrr/',
       gitHub: 'https://github.com/yTakkar',
       linkedIn: 'https://www.linkedin.com/in/faiyaz-s-413450118/',
     },

@@ -19,16 +19,16 @@ const Home: NextPage<IProps> = props => {
       <div className="px-5 md:px-10 pb-20 lg:max-w-[620px] ">
         <div>
           <CoreImage
-            url="/images/logo.jpeg"
+            url="/images/logo-3.jpeg"
             alt={appConfig.global.fullName}
-            className="w-full mb-10 rounded-lg max-h-[500px] shadow-2xl object-cover"
+            className="w-full mb-10 rounded-lg max-h-[600px] shadow-2xl object-cover"
           />
         </div>
 
         <div>
           <h2 className="mt-12 mb-6 text-3xl lg:text-4xl font-black font-primary-bold">
             <span className="text-gray600">Hi, I'm </span>
-            {appConfig.global.name} ({appConfig.global.nickName})
+            {appConfig.global.name}
           </h2>
         </div>
 
@@ -36,7 +36,7 @@ const Home: NextPage<IProps> = props => {
           <p className="">
             A passionate <span className="font-medium font-primary-medium">polygot programmer</span> and an{' '}
             <span className="font-medium font-primary-medium">open-sourcer</span>. I like to build delightful digital
-            products. I believe in choosing the correct tech stack for the job at hand.
+            products from ideation to launch (0 to 1).
           </p>
 
           {/* <p className="mt-6">Open to part-time freelancing opportunities.</p> */}
