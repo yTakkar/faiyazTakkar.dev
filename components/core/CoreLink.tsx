@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 import appConfig from '../../config/appConfig'
 
 export interface ICoreLinkProps {
-  url: string
+  url: string | null
   className?: string
   isExternal?: boolean
   style?: CSSProperties
@@ -15,12 +15,13 @@ export interface ICoreLinkProps {
 const CoreLink: React.FC<ICoreLinkProps> = props => {
   const { url, className, isExternal, style, title, onClick, children } = props
 
-  const handleClick = e => {
+  const handleClick: React.MouseEventHandler<HTMLAnchorElement> = e => {
     if (onClick) onClick(e)
   }
 
   if ((url && url.indexOf('http') === 0) || !url) {
     return (
+      // eslint-disable-next-line react/jsx-no-target-blank
       <a
         href={url || 'javascript:;'}
         className={className}
@@ -35,17 +36,16 @@ const CoreLink: React.FC<ICoreLinkProps> = props => {
   }
 
   return (
-    <NextLink href={url}>
-      <a
-        data-hover={typeof children === 'string' ? children : ''}
-        className={className}
-        target={isExternal ? '_blank' : '_self'}
-        rel={isExternal ? 'noopener noreferrer' : ''}
-        style={style}
-        title={title}
-        onClick={handleClick}>
-        {children}
-      </a>
+    <NextLink
+      href={url}
+      className={className}
+      target={isExternal ? '_blank' : '_self'}
+      rel={isExternal ? 'noopener noreferrer' : ''}
+      style={style}
+      title={title}
+      onClick={handleClick}
+      data-hover={typeof children === 'string' ? children : ''}>
+      {children}
     </NextLink>
   )
 }
