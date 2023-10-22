@@ -39,6 +39,8 @@ const Home: NextPage<IProps> = props => {
             products from ideation to launch (0 to 1).
           </p>
 
+          <p className='mt-6'>Always on the lookout for exciting new opportunities to collaborate and contribute. Feel free to reach out and let's connect!</p>
+
           {/* <p className="mt-6">Open to part-time freelancing opportunities.</p> */}
 
           <p className="mt-6">
