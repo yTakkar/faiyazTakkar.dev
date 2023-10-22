@@ -1,7 +1,7 @@
 const workConfig = {
   list: [
     {
-      role: 'Builder',
+      role: 'Member of Technical Staff',
       company: {
         name: 'Kognitos',
         logo: '/images/logos/kognitos.jpeg',
@@ -14,11 +14,11 @@ const workConfig = {
       },
       location: 'Remote',
       experience: {
-        from: 'May 2022',
+        from: 'April 2022',
         to: 'Present',
         total: '',
       },
-      highlights: [`Building an AI brain for hyper automation.`],
+      highlights: [],
     },
     {
       role: 'Independent Consultant',
