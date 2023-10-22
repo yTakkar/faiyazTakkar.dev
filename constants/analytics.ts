@@ -9,4 +9,6 @@ export enum AnalyticsEventType {
   NAV_SOCIAL_LINKEDIN = 'nav_social_linkedin',
   NAV_SOCIAL_INSTAGRAM = 'nav_social_instagram',
   NAV_SOCIAL_MAIL = 'nav_social_mail',
+
+  HOME_LINKEDIN = 'home_linkedin',
 }

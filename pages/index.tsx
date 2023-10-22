@@ -8,6 +8,7 @@ import CoreLink from '../components/core/CoreLink'
 import dayjs from 'dayjs'
 import { getIntroPageUrl } from '../utils/intro'
 import { AnnotationIcon } from '@heroicons/react/outline'
+import { AnalyticsEventType } from '../constants/analytics'
 
 interface IProps extends IGlobalLayoutProps {
   pageData: {}
@@ -39,7 +40,16 @@ const Home: NextPage<IProps> = props => {
             products from ideation to launch (0 to 1).
           </p>
 
-          <p className='mt-6'>Always on the lookout for exciting new opportunities to collaborate and contribute. Feel free to reach out and let's connect!</p>
+          <p className='mt-6'>Always on the lookout for exciting new opportunities to collaborate and contribute. Feel free to reach out and <CoreLink
+              url={appConfig.global.socialProfiles.linkedIn}
+              className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center"
+              isExternal
+              onClick={() => {
+                ga('event', AnalyticsEventType.HOME_LINKEDIN)
+              }}
+              >
+              let's connect!
+            </CoreLink></p>
 
           {/* <p className="mt-6">Open to part-time freelancing opportunities.</p> */}
 
