@@ -54,7 +54,7 @@ const workConfig = {
       role: 'Author',
       company: {
         name: 'OwnStore',
-        logo: '/images/logos/ownstore.jpeg',
+        logo: '/images/logos/ownstore.png',
         urls: [
           {
             label: 'OwnStore',

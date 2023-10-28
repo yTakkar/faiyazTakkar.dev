@@ -37,7 +37,7 @@ const Intro: NextPage<IProps> = props => {
 
         <p className="mt-5">
           Got my first job offer as a front-end developer from People Interactive (shaadi.com) when I was 19. At the
-          moment, I'm a member of Kognitos' technical staff where we're building an AI brain for hyper automation. Learn
+          moment, I'm a member of Kognitos' technical staff where we're building an OS for rapid automation and innovation fueled by AI and a Natural Language interpreter. Learn
           more about my work experience in detail{' '}
           <CoreLink
             url={getWorkPageUrl()}
