@@ -22,7 +22,7 @@ const Home: NextPage<IProps> = props => {
           <CoreImage
             url="/images/author.jpg"
             alt={appConfig.global.fullName}
-            className="w-full mb-10 rounded-lg max-h-[650px] shadow-2xl object-cover"
+            className="w-full mb-10 rounded-lg max-h-[600px] shadow-2xl object-cover"
           />
         </div>
 
