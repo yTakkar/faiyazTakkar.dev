@@ -20,9 +20,9 @@ const Home: NextPage<IProps> = props => {
       <div className="px-5 md:px-10 pb-20 lg:max-w-[620px] ">
         <div>
           <CoreImage
-            url="/images/logo-3.jpeg"
+            url="/images/author.jpg"
             alt={appConfig.global.fullName}
-            className="w-full mb-10 rounded-lg max-h-[600px] shadow-2xl object-cover"
+            className="w-full mb-10 rounded-lg max-h-[650px] shadow-2xl object-cover"
           />
         </div>
 
@@ -37,10 +37,7 @@ const Home: NextPage<IProps> = props => {
           <p className="">
             A passionate <span className="font-medium font-primary-medium">polygot programmer</span> and an{' '}
             <span className="font-medium font-primary-medium">open-sourcer</span>. I like to build delightful digital
-            products from ideation to launch (0 to 1).
-          </p>
-
-          <p className='mt-6'>Always on the lookout for exciting new opportunities to collaborate and contribute. Feel free to reach out and <CoreLink
+            products from ideation to launch (0 to 1). <CoreLink
               url={appConfig.global.socialProfiles.linkedIn}
               className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center"
               isExternal
@@ -48,8 +45,9 @@ const Home: NextPage<IProps> = props => {
                 ga('event', AnalyticsEventType.HOME_LINKEDIN)
               }}
               >
-              let's connect!
-            </CoreLink></p>
+              Let's connect!
+            </CoreLink>
+          </p>
 
           {/* <p className="mt-6">Open to part-time freelancing opportunities.</p> */}
 
