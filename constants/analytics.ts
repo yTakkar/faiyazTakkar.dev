@@ -1,6 +1,7 @@
 export enum AnalyticsEventType {
   NAV_HOME = 'nav_home',
   NAV_INTRO = 'nav_intro',
+  NAV_SIDE_PROJECTS = 'nav_side_projects',
   NAV_WORK = 'nav_work',
 
   // social

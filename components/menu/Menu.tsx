@@ -1,4 +1,4 @@
-import { AnnotationIcon, BriefcaseIcon, ChipIcon, ExternalLinkIcon, HomeIcon } from '@heroicons/react/outline'
+import { AnnotationIcon, BeakerIcon, BriefcaseIcon, ChipIcon, ExternalLinkIcon, HomeIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 import React, { useContext, useState } from 'react'
 import appConfig from '../../config/appConfig'
@@ -28,11 +28,12 @@ const PAGE_LINKS = [
     url: getIntroPageUrl(),
     analyticsEvent: AnalyticsEventType.NAV_INTRO,
   },
-  // {
-  //   label: 'Side Projects',
-  //   icon: ChipIcon,
-  //   url: getSideProjectsPageUrl(),
-  // },
+  {
+    label: 'Side Projects',
+    icon: ChipIcon,
+    url: getSideProjectsPageUrl(),
+    analyticsEvent: AnalyticsEventType.NAV_SIDE_PROJECTS,
+  },
   {
     label: 'Work',
     icon: BriefcaseIcon,

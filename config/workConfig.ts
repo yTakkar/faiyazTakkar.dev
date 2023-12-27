@@ -51,34 +51,6 @@ const workConfig = {
       ],
     },
     {
-      role: 'Author',
-      company: {
-        name: 'OwnStore',
-        logo: '/images/logos/ownstore.png',
-        urls: [
-          {
-            label: 'OwnStore',
-            href: 'https://ownstore.dev',
-          },
-          {
-            label: 'Demo',
-            href: 'https://own-store-demo.vercel.app/',
-          },
-        ],
-      },
-      location: 'Remote',
-      experience: {
-        from: 'Feb 2021',
-        to: 'Dec 2021',
-        total: '11 mos',
-      },
-      highlights: [
-        `Developed as a side project.`,
-        `Worked end-to-end from ideation, data design, UI design, development, testing, deployment, marketing to analytics.`,
-        `Completely open-sourced now!`,
-      ],
-    },
-    {
       role: 'Founding Software Engineer',
       company: {
         name: 'Proximity Labs',
