@@ -34,11 +34,11 @@ const Work: NextPage<IProps> = props => {
           {workExperienceList.map((workExperience, index) => {
             return (
               <div key={index} className="flex items-start py-4">
-                <div>
+                <div className="w-14 h-14 min-w-14 min-h-14 mr-3 relative top-[6px]">
                   <CoreImage
                     url={workExperience.company.logo}
                     alt={`${appConfig.global.fullName}'s work experience at ${workExperience.company.name}`}
-                    className="w-14 h-14 min-w-14 min-h-14 mr-3 relative top-[6px]"
+                    className="w-full h-full"
                   />
                 </div>
                 <div>

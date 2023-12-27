@@ -4,7 +4,7 @@ const workConfig = {
       role: 'Member of Technical Staff',
       company: {
         name: 'Kognitos',
-        logo: '/images/logos/kognitos.jpeg',
+        logo: '/images/logos/kognitos_logo.jpeg',
         urls: [
           {
             label: 'Kognitos',

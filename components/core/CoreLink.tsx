@@ -40,7 +40,7 @@ const CoreLink: React.FC<ICoreLinkProps> = props => {
       href={url}
       className={className}
       target={isExternal ? '_blank' : '_self'}
-      rel={isExternal ? 'noopener noreferrer' : ''}
+      rel={isExternal ? 'noopener' : ''}
       style={style}
       title={title}
       onClick={handleClick}
