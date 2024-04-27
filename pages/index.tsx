@@ -29,13 +29,13 @@ const Home: NextPage<IProps> = props => {
         <div>
           <h2 className="mt-12 mb-6 text-3xl lg:text-4xl font-black font-primary-bold">
             <span className="text-gray600">Hi, I'm </span>
-            {appConfig.global.name}
+            {appConfig.global.name} 👋
           </h2>
         </div>
 
         <div className="post-content text-lg text-gray900">
           <p className="">
-            A passionate <span className="font-medium font-primary-medium">polygot programmer</span> and an{' '}
+            A passionate <span className="font-medium font-primary-medium">polygot programmer</span>, <span className="font-medium font-primary-medium">2x founding engineer</span> and an{' '}
             <span className="font-medium font-primary-medium">open-sourcer</span>. I like to build delightful digital
             products from ideation to launch (0 to 1). <CoreLink
               url={appConfig.global.socialProfiles.linkedIn}
