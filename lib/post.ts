@@ -5,6 +5,10 @@ import { IPostDetail, IPostInfo } from '../interface/post'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
+const isHiddenPath = (path: string) => {
+  return /(^|\/)\.[^\/\.]/g.test(path)
+}
+
 export const getPostDetailById = (id: string): IPostDetail => {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -22,17 +26,19 @@ export const getPostDetailById = (id: string): IPostDetail => {
 export const listPostInfos = (): IPostInfo[] => {
   const fileNames = fs.readdirSync(postsDirectory)
 
-  const postInfos: IPostInfo[] = fileNames.map(fileName => {
-    const id = fileName.replace(/\.md$/, '')
-    const postDetail = getPostDetailById(id)
-    return {
-      id,
-      title: postDetail.title,
-      description: postDetail.description,
-      keywords: postDetail.keywords,
-      date: postDetail.date,
-    }
-  })
+  const postInfos: IPostInfo[] = fileNames
+    .filter(fileName => !isHiddenPath(fileName))
+    .map(fileName => {
+      const id = fileName.replace(/\.md$/, '')
+      const postDetail = getPostDetailById(id)
+      return {
+        id,
+        title: postDetail.title,
+        description: postDetail.description,
+        keywords: postDetail.keywords,
+        date: postDetail.date,
+      }
+    })
 
   return postInfos.sort((a, b) => {
     if (a.date < b.date) {
@@ -45,5 +51,5 @@ export const listPostInfos = (): IPostInfo[] => {
 
 export const listPostIds = (): string[] => {
   const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames.map(fileName => fileName.replace(/\.md$/, ''))
+  return fileNames.filter(fileName => !isHiddenPath(fileName)).map(fileName => fileName.replace(/\.md$/, ''))
 }
