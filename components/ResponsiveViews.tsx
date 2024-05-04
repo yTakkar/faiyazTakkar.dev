@@ -1,8 +1,9 @@
-import React, { useContext, PropsWithChildren } from 'react'
+import React, { useContext, ReactNode } from 'react'
 import ApplicationContext from './ApplicationContext'
 
 interface IResponsiveViewProps {
   useCSS?: boolean
+  children: ReactNode
 }
 
 export const DesktopView: React.FC<IResponsiveViewProps> = props => {

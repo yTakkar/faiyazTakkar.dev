@@ -14,15 +14,19 @@ const Intro: NextPage<IProps> = props => {
   return (
     <div className="pt-5 lg:pt-8 lg:ml-72">
       <div className="px-5 md:px-10 pb-20">
-        <div className="text-2xl font-bold font-primary-bold">Detailed introduction</div>
+        <div className="text-2xl font-bold text-typo-title">Detailed introduction</div>
 
         <p className="mt-6">
-        At 12, <CoreLink
+          At 12,{' '}
+          <CoreLink
             url="https://www.youtube.com/watch?v=mB2V0BXH608&list=PLuwBxoTBSqUCKf0BXlR5EUullDyzStVK0"
             className="border-dashed border-b border-funBlue text-funBlue"
             isExternal>
             Bloomberg documentaries
-          </CoreLink> about different tech companies and their founders inspired me to learn programming and eventually launch tech products of my own. YouTube helped me fuel my programming journey. Philosophy and literature helped me navigate better.
+          </CoreLink>{' '}
+          about different tech companies and their founders inspired me to learn programming and eventually launch tech
+          products of my own. YouTube helped me fuel my programming journey. Philosophy and literature helped me
+          navigate better.
         </p>
 
         <p className="mt-5">
@@ -41,11 +45,10 @@ const Intro: NextPage<IProps> = props => {
 
         <p className="mt-5">
           Got my first job offer as a front-end developer from People Interactive (shaadi.com) when I was 19. At the
-          moment, I'm a member of Kognitos' technical staff. Learn
-          more about my work experience in detail{' '}
+          moment, I'm a member of Kognitos' technical staff. Learn more about my work experience in detail{' '}
           <CoreLink
             url={getWorkPageUrl()}
-            className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
+            className="border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
             here <BriefcaseIcon className="w-5 ml-1" />
           </CoreLink>
           .

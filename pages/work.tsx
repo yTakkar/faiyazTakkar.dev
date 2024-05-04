@@ -18,14 +18,14 @@ const Work: NextPage<IProps> = props => {
   return (
     <div className="pt-5 lg:pt-8 lg:ml-72">
       <div className="px-5 md:px-10 pb-20">
-        <div className="text-2xl lg:text-3xl font-bold font-primary-bold">My work experience!</div>
+        <div className="text-2xl lg:text-3xl font-bold text-typo-title">My work experience!</div>
 
         <div className="mt-2">
           Learn more about my professional experience on{' '}
           <CoreLink
             url={appConfig.global.socialProfiles.linkedIn}
             isExternal
-            className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
+            className="font-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
             LinkedIn <ExternalLinkIcon className="w-4 ml-1" />
           </CoreLink>{' '}
         </div>
@@ -42,7 +42,7 @@ const Work: NextPage<IProps> = props => {
                   />
                 </div>
                 <div>
-                  <div className="font-medium font-primary-medium text-lg">{workExperience.role}</div>
+                  <div className="font-bold text-lg">{workExperience.role}</div>
                   <div className="text-sm">
                     {workExperience.company.name} - {workExperience.location}
                   </div>

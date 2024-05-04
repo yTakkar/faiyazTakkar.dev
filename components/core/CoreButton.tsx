@@ -17,7 +17,7 @@ export enum CoreButtonSize {
   LARGE = 'LARGE',
 }
 
-interface ICoreButtonProps {
+export interface ICoreButtonProps {
   label: ReactNode
   type: CoreButtonType
   size: CoreButtonSize

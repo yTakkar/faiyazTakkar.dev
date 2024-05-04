@@ -1,11 +1,17 @@
-import { AnnotationIcon, BeakerIcon, BriefcaseIcon, ChipIcon, ExternalLinkIcon, HomeIcon } from '@heroicons/react/outline'
+import {
+  AnnotationIcon,
+  BriefcaseIcon,
+  ChipIcon,
+  ExternalLinkIcon,
+  HomeIcon,
+  PencilAltIcon,
+} from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import appConfig from '../../config/appConfig'
 import { SOCIAL_ICONS_SRC_MAP } from '../../constants/constants'
 import { getHomePageUrl } from '../../utils/home'
 import { getWorkPageUrl } from '../../utils/work'
-import ApplicationContext from '../ApplicationContext'
 import CoreActiveLink from '../core/CoreActiveLink'
 import CoreImage from '../core/CoreImage'
 import CoreLink from '../core/CoreLink'
@@ -14,6 +20,7 @@ import classnames from 'classnames'
 import { getIntroPageUrl } from '../../utils/intro'
 import { getSideProjectsPageUrl } from '../../utils/side-projects'
 import { AnalyticsEventType } from '../../constants/analytics'
+import { getPostsPageUrl } from '../../utils/post'
 
 const PAGE_LINKS = [
   {
@@ -27,6 +34,12 @@ const PAGE_LINKS = [
     icon: AnnotationIcon,
     url: getIntroPageUrl(),
     analyticsEvent: AnalyticsEventType.NAV_INTRO,
+  },
+  {
+    label: 'Posts',
+    icon: PencilAltIcon,
+    url: getPostsPageUrl(),
+    analyticsEvent: AnalyticsEventType.NAV_BLOGS,
   },
   {
     label: 'Side Projects',
@@ -88,7 +101,7 @@ const MenuContent: React.FC<IMenuProps> = () => {
   return (
     <div>
       <div>
-        {PAGE_LINKS.map((pageLink, index) => {
+        {PAGE_LINKS.map(pageLink => {
           const defaultIcon = () => null
           const Icon = pageLink.icon || defaultIcon
 
@@ -97,7 +110,7 @@ const MenuContent: React.FC<IMenuProps> = () => {
               key={pageLink.label}
               url={pageLink.url}
               className={classnames(
-                'flex items-center transition-all rounded-lg w-full px-4 py-2 mb-2',
+                'flex items-center transition-all rounded-lg w-full px-4 py-2 mb-1',
                 asPath === pageLink.url ? 'bg-primary hover:bg-primary text-white' : 'hover:bg-gray100'
               )}
               onClick={() => {
@@ -112,12 +125,12 @@ const MenuContent: React.FC<IMenuProps> = () => {
 
       <div className="mt-6 mb-2 text-gray600 ml-4">Let's connect</div>
       <div>
-        {SOCIAL_LINKS.map((socialLink, index) => {
+        {SOCIAL_LINKS.map(socialLink => {
           return (
             <CoreActiveLink
               key={socialLink.label}
               url={socialLink.url}
-              className="flex items-center hover:bg-gray100 transition-all rounded-lg w-full px-4 py-2 mb-2"
+              className="flex items-center hover:bg-gray100 transition-all rounded-lg w-full px-4 py-2 mb-1"
               isExternal={socialLink.isExternal}
               onClick={() => {
                 ga('event', socialLink.analyticsEvent)
@@ -135,14 +148,14 @@ const MenuContent: React.FC<IMenuProps> = () => {
 
 interface IMenuMobileProps extends IMenuProps {}
 
-const MenuMobile: React.FC<IMenuMobileProps> = props => {
+const MenuMobile: React.FC<IMenuMobileProps> = () => {
   const [showMenu, toggleMenu] = useState(false)
 
   return (
     <nav>
       {!showMenu ? (
         <div className="fixed bottom-0 left-0 z-10 block w-full p-2" onClick={() => toggleMenu(true)}>
-          <div className="border border-gray400 rounded-lg text-black bg-white/70 backdrop-filter backdrop-blur py-3 text-center cursor-pointer font-medium font-primary-medium">
+          <div className="border border-gray400 rounded-lg text-black bg-white/70 backdrop-filter backdrop-blur py-3 text-center cursor-pointer font-medium ">
             Menu
           </div>
         </div>
@@ -152,9 +165,7 @@ const MenuMobile: React.FC<IMenuMobileProps> = props => {
         <div
           className="fixed bottom-0 left-0 right-0 z-10 p-2 m-2 bg-white/70 backdrop-filter backdrop-blur border border-gray400 rounded-lg"
           onClick={() => toggleMenu(false)}>
-          <div
-            className="py-3 text-center cursor-pointer text-black font-medium font-primary-medium"
-            onClick={() => toggleMenu(false)}>
+          <div className="py-3 text-center cursor-pointer text-black font-medium " onClick={() => toggleMenu(false)}>
             Close
           </div>
           <MenuContent />
@@ -177,11 +188,6 @@ const MenuDesktop: React.FC<IMenuDesktopProps> = props => {
 }
 
 const Menu: React.FC<IMenuProps> = props => {
-  const applicationContext = useContext(ApplicationContext)
-  const {
-    device: { isSm },
-  } = applicationContext
-
   return (
     <div>
       <MobileView useCSS>

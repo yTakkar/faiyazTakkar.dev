@@ -18,16 +18,16 @@ const Home: NextPage<IProps> = props => {
   return (
     <div className="pt-5 lg:pt-8 lg:ml-72">
       <div className="px-5 md:px-10 pb-20 lg:max-w-[620px] ">
-        <div>
+        <div className="flex justify-center">
           <CoreImage
             url="/images/author.jpg"
             alt={appConfig.global.fullName}
-            className="w-full mb-10 rounded-lg max-h-[600px] shadow-2xl object-cover"
+            className="rounded-full w-[250px] h-[250px] shadow-2xl object-cover"
           />
         </div>
 
         <div>
-          <h2 className="mt-12 mb-6 text-3xl lg:text-4xl font-black font-primary-bold">
+          <h2 className="mt-8 lg:mt-12 mb-6 text-3xl lg:text-4xl font-bold">
             <span className="text-gray600">Hi, I'm </span>
             {appConfig.global.name} 👋
           </h2>
@@ -35,16 +35,17 @@ const Home: NextPage<IProps> = props => {
 
         <div className="post-content text-lg text-gray900">
           <p className="">
-            A passionate <span className="font-medium font-primary-medium">polygot programmer</span>, <span className="font-medium font-primary-medium">2x founding engineer</span> and an{' '}
-            <span className="font-medium font-primary-medium">open-sourcer</span>. I like to build delightful digital
-            products from ideation to launch (0 to 1). <CoreLink
+            A passionate <span className="font-bold">polygot programmer</span>,{' '}
+            <span className="font-bold">2x founding engineer</span> and an{' '}
+            <span className="font-bold">open-sourcer</span>. I like to build delightful digital products from ideation
+            to launch (0 to 1).{' '}
+            <CoreLink
               url={appConfig.global.socialProfiles.linkedIn}
-              className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center"
+              className="font-bold border-dashed border-b border-funBlue text-funBlue inline-flex items-center"
               isExternal
               onClick={() => {
                 ga('event', AnalyticsEventType.HOME_LINKEDIN)
-              }}
-              >
+              }}>
               Let's connect!
             </CoreLink>
           </p>
@@ -55,7 +56,7 @@ const Home: NextPage<IProps> = props => {
             Learn more about me{' '}
             <CoreLink
               url={getIntroPageUrl()}
-              className="font-medium font-primary-medium border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
+              className="font-bold border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
               here <AnnotationIcon className="w-5 ml-1" />
             </CoreLink>
           </p>

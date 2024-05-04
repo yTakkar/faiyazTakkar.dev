@@ -27,6 +27,12 @@ const tailwindConfig = {
       primaryText: '#404040', // primary text color
       primaryTextBold: '#1e1e1e', // primary bold text color
 
+      typo: {
+        title: '#1e1e1e',
+        paragraph: '#282828',
+        paragraphLight: '#717171',
+      },
+
       gray: '#919191',
 
       gray100: '#f9f9fb',
@@ -278,9 +284,35 @@ const tailwindConfig = {
       DEFAULT: '1',
     },
     fontFamily: {
-      primary: ['"BentonSans"', 'Arial', 'Noto Sans', 'sans-serif'],
-      'primary-bold': ['"BentonSans-Bold"', 'Arial', 'Noto Sans', 'sans-serif'],
-      'primary-medium': ['"BentonSans-Medium"', 'Arial', 'Noto Sans', 'sans-serif'],
+      primary: ['"Nunito"', 'Helvetica'],
+
+      sans: [
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        '"Noto Sans"',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ],
+      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      mono: [
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace',
+      ],
     },
     fontSize: {
       xxs: ['0.625rem', { lineHeight: '1rem' }],

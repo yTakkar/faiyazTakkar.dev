@@ -12,7 +12,7 @@ const workConfig = {
         ],
       },
       description: 'Share Recommendations, Discover Passions, and Build Community!',
-      highlights: []
+      highlights: [],
     },
     {
       company: {

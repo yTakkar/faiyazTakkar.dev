@@ -1,0 +1,40 @@
+// Styles for HTML stored in DB (eg. Terms & Conditions, Product feature section)
+
+.html-body {
+  & p {
+    margin: 1rem 0;
+  }
+
+  h1 {
+    @apply text-2xl;
+    font-weight: 600;
+    margin: 1rem 0;    
+  }
+  h2 {
+    @apply text-xl;
+    font-weight: 600;
+    margin: 1rem 0;  
+  }
+  h3 {
+    @apply text-lg;
+    font-weight: 600;
+    margin: 1rem 0;  
+  }
+
+  & ul {
+    @apply list-disc;
+    @apply ml-5;
+  }
+
+  & li {
+    @apply py-1;
+  }
+
+  & b {
+    @apply font-bold text-typo-paragraph; 
+  }
+
+  & a {
+    @apply underline hover:text-typo-paragraph;
+  }
+}

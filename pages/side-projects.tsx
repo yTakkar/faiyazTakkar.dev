@@ -17,7 +17,7 @@ const SideProjects: NextPage<IProps> = props => {
   return (
     <div className="pt-5 lg:pt-8 lg:ml-72">
       <div className="px-5 md:px-10 pb-20">
-      <div className="text-2xl lg:text-3xl font-bold font-primary-bold">Side Projects</div>
+        <div className="text-2xl lg:text-3xl font-bold text-typo-title">Side Projects</div>
 
         <div className="mt-6 grid grid-cols-1 lg:gap-y-4">
           {sideProjectsList.map((workExperience, index) => {
@@ -31,12 +31,8 @@ const SideProjects: NextPage<IProps> = props => {
                   />
                 </div>
                 <div>
-                  <div className="font-medium font-primary-medium text-lg">{workExperience.company.name}</div>
-                  {workExperience.description && (
-                      <div className="text-sm mt-1">
-                        {workExperience.description}
-                      </div>
-                  )}
+                  <div className="font-bold text-lg">{workExperience.company.name}</div>
+                  {workExperience.description && <div className="text-sm mt-1">{workExperience.description}</div>}
 
                   <div className="mt-2 text-sm">
                     {/* <div className="font-medium font-primary-medium">Highlights:</div> */}
