@@ -2,6 +2,20 @@ const workConfig = {
   list: [
     {
       company: {
+        name: 'BookByBoard',
+        logo: '/images/logos/bookbyboard.png',
+        urls: [
+          {
+            label: 'BookByBoard',
+            href: 'https://bookbyboard.com',
+          },
+        ],
+      },
+      description: 'Expert-Selected Books Every Month',
+      highlights: [],
+    },
+    {
+      company: {
         name: 'MyLikes',
         logo: '/images/logos/mylikes.png',
         urls: [
