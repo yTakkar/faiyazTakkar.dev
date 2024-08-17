@@ -24,14 +24,21 @@ const Posts: NextPage<IProps> = props => {
     }
 
     return postInfos.map(postInfo => {
-      return <PostInfo key={postInfo.id} postInfo={postInfo} />
+      return (
+        <div key={postInfo.id}>
+          <PostInfo postInfo={postInfo} />
+          <div className="border-b border-gray200 my-4" />
+        </div>
+      )
     })
   }
 
   return (
-    <div className="pt-5 lg:pt-8 lg:ml-72 w-full">
+    <div className="pt-5 lg:pt-8 lg:ml-72">
       <div className="px-5 md:px-10 pb-20">
         <div className="text-2xl lg:text-3xl font-bold text-typo-title">Posts</div>
+        <div className="text-sm text-typo-paragraphLight mt-2">A sneak peek into Faiyaz's mind.</div>
+
         <div className="mt-8">{renderContent()}</div>
       </div>
     </div>

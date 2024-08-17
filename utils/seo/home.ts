@@ -8,7 +8,7 @@ export const prepareHomePageSeo = (): IAppSeoProps => {
   return {
     title: `Hi, I'm ${appConfig.global.fullName}!`,
     description: `I'm a digital product builder by profession.`,
-    canonical: getHomePageUrl(),
+    canonical: `${appConfig.global.baseUrl}${getHomePageUrl()}`,
     keywords: [...COMMON_KEYWORDS],
   }
 }

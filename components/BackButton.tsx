@@ -15,7 +15,7 @@ function BackButton(props: IBackButtonProps) {
   return (
     <div className="flex items-center mb-4 hover:underline cursor-pointer text-funBlue" onClick={handleBackIconClick}>
       <ArrowLeftIcon className="h-4 w-4 mr-2 text-funBlue" />
-      <span className="text-sm ">Back</span>
+      <span className="text-sm">All Posts</span>
     </div>
   )
 }

@@ -77,13 +77,13 @@ const SOCIAL_LINKS = [
     url: appConfig.global.socialProfiles.instagram,
     analyticsEvent: AnalyticsEventType.NAV_SOCIAL_INSTAGRAM,
   },
-  {
-    label: 'Twitter',
-    iconUrl: SOCIAL_ICONS_SRC_MAP.TWITTER,
-    isExternal: true,
-    url: appConfig.global.socialProfiles.twitter,
-    analyticsEvent: AnalyticsEventType.NAV_SOCIAL_TWITTER,
-  },
+  // {
+  //   label: 'Twitter',
+  //   iconUrl: SOCIAL_ICONS_SRC_MAP.TWITTER,
+  //   isExternal: true,
+  //   url: appConfig.global.socialProfiles.twitter,
+  //   analyticsEvent: AnalyticsEventType.NAV_SOCIAL_TWITTER,
+  // },
   {
     label: 'Email',
     iconUrl: SOCIAL_ICONS_SRC_MAP.MAIL,

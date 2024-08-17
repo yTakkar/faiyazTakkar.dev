@@ -37,4 +37,12 @@
   & a {
     @apply underline hover:text-typo-paragraph;
   }
+
+  & em {
+    @apply block;
+  }
+
+  & hr {
+    @apply text-gray200;
+  }
 }

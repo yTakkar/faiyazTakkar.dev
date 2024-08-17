@@ -13,6 +13,7 @@ import { getDeviceInfo } from '../utils/applicationContext'
 import { isBrowser } from '../utils/common'
 import Menu from '../components/menu/Menu'
 import { PageTransition } from 'next-page-transitions'
+import Toaster from '../components/Toaster'
 
 declare let window: any
 
@@ -63,6 +64,8 @@ const MyApp: NextPage<IProps> = props => {
               <Component {...pageProps} key={router.route} />
             </PageTransition>
           </div>
+
+          <Toaster />
         </PageContainer>
       </ApplicationContext.Provider>
     </div>

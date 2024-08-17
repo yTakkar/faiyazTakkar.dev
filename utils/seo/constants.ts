@@ -3,7 +3,10 @@ export const COMMON_KEYWORDS = [
   'Takkar',
   'yTakkar',
   'Faiyaz Shaikh',
+  'Faiyaz Takkar',
   'Faiyaz portfolio',
   'Software Consultant',
   'Portfolio',
+  'Product Builder',
+  'Founding Engineer',
 ]

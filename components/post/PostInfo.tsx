@@ -2,7 +2,8 @@ import React from 'react'
 import { IPostInfo } from '../../interface/post'
 import CoreLink from '../core/CoreLink'
 import { getPostPageUrl } from '../../utils/post'
-import { getRelativeTime } from '../../utils/date'
+import { getFormattedDate } from '../../utils/date'
+import PostTypeTag from './PostTypeTag'
 
 interface IPostInfoProps {
   postInfo: IPostInfo
@@ -16,7 +17,9 @@ function PostInfo(props: IPostInfoProps) {
       <CoreLink url={getPostPageUrl(postInfo.id)}>
         <div className="font-bold text-lg">{postInfo.title}</div>
         <div className="text-sm mt-1 text-typo-paragraphLight">{postInfo.description}</div>
-        <div className="text-xs text-typo-paragraphLight mt-1">{getRelativeTime(postInfo.date)}</div>
+        <div className="text-sm text-typo-paragraphLight mt-2 flex items-center">
+          {getFormattedDate(postInfo.date)} <PostTypeTag type={postInfo.type} />
+        </div>
       </CoreLink>
     </div>
   )

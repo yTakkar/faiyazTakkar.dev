@@ -20,7 +20,8 @@
     "react-dom": "18.2.0",
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0",
-    "sass": "^1.67.0"
+    "sass": "^1.67.0",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.4",

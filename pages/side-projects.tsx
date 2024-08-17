@@ -27,7 +27,7 @@ const SideProjects: NextPage<IProps> = props => {
                   <CoreImage
                     url={workExperience.company.logo}
                     alt={`${appConfig.global.fullName}'s work experience at ${workExperience.company.name}`}
-                    className="w-full h-full"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div>

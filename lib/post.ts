@@ -15,6 +15,7 @@ export const getPostDetailById = (id: string): IPostDetail => {
   const matterResult = matter(fileContents)
   return {
     id,
+    type: matterResult.data.type,
     title: matterResult.data.title,
     description: matterResult.data.description,
     keywords: matterResult.data.keywords,
@@ -33,6 +34,7 @@ export const listPostInfos = (): IPostInfo[] => {
       const postDetail = getPostDetailById(id)
       return {
         id,
+        type: postDetail.type,
         title: postDetail.title,
         description: postDetail.description,
         keywords: postDetail.keywords,
@@ -41,7 +43,7 @@ export const listPostInfos = (): IPostInfo[] => {
     })
 
   return postInfos.sort((a, b) => {
-    if (a.date < b.date) {
+    if (new Date(a.date).getTime() < new Date(b.date).getTime()) {
       return 1
     } else {
       return -1

@@ -8,8 +8,8 @@ import { COMMON_KEYWORDS } from './constants'
 export const preparePostsPageSeo = (): IAppSeoProps => {
   return {
     title: `Posts - ${appConfig.global.fullName}`,
-    description: `Check out my posts on various topics.`,
-    canonical: getPostsPageUrl(),
+    description: `A sneak peek into Faiyaz's mind. Read his thoughts, ideas, past memories and experiences.`,
+    canonical: `${appConfig.global.baseUrl}${getPostsPageUrl()}`,
     keywords: [...COMMON_KEYWORDS],
   }
 }
@@ -17,9 +17,9 @@ export const preparePostsPageSeo = (): IAppSeoProps => {
 // http://localhost:3005/posts/1
 export const preparePostPageSeo = (postDetail: IPostDetail): IAppSeoProps => {
   return {
-    title: `${postDetail.title} - ${appConfig.global.fullName}`,
-    description: postDetail.description,
-    canonical: getPostPageUrl(postDetail.id),
+    title: `${postDetail.title} - by ${appConfig.global.fullName}`,
+    description: `${postDetail.description}`,
+    canonical: `${appConfig.global.baseUrl}${getPostPageUrl(postDetail.id)}`,
     keywords: [...COMMON_KEYWORDS, ...postDetail.keywords],
   }
 }

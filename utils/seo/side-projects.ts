@@ -8,7 +8,7 @@ export const prepareSideProjectsPageSeo = (): IAppSeoProps => {
   return {
     title: `Side projects - ${appConfig.global.fullName}`,
     description: `My side projects.`,
-    canonical: getSideProjectsPageUrl(),
+    canonical: `${appConfig.global.baseUrl}${getSideProjectsPageUrl()}`,
     keywords: [...COMMON_KEYWORDS],
   }
 }

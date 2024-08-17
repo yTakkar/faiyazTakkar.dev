@@ -8,7 +8,7 @@ export const prepareWorkPageSeo = (): IAppSeoProps => {
   return {
     title: `Work - ${appConfig.global.fullName}`,
     description: `My professional background.`,
-    canonical: getWorkPageUrl(),
+    canonical: `${appConfig.global.baseUrl}${getWorkPageUrl()}`,
     keywords: [...COMMON_KEYWORDS],
   }
 }
