@@ -27,7 +27,7 @@ const useNativeShare = (props: IProps) => {
     if (window.navigator.share) {
       window.navigator
         .share({
-          title: title || appConfig.global.app.name,
+          title: title || appConfig.global.fullName,
           text,
           url: url,
         })
