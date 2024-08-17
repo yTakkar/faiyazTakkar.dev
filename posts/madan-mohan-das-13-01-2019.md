@@ -1,7 +1,7 @@
 ---
 title: Madan Mohan Danish Poetry
 description: A few couplets from Madan Mohan Danish's easy-to-grasp poetry. Performed at the Jashn-e-Rekhta event in Delhi.
-date: 01-13-2019
+date: 13-01-2019
 keywords: [Madan Mohan Danish, Poetry]
 type: poetry
 ---

@@ -5,7 +5,7 @@ import { listPostIds, getPostDetailById } from '../../lib/post'
 import { IPostDetail } from '../../interface/post'
 import { preparePostPageSeo } from '../../utils/seo/post'
 import MarkdownRenderer from '../../components/MarkdownRenderer'
-import { getFormattedDate, getRelativeTime } from '../../utils/date'
+import { getFormattedPostDate, getRelativeTime } from '../../utils/date'
 import { ArrowLeftIcon, ShareIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 import { copyToClipboard, routerPageBack } from '../../utils/common'
@@ -86,7 +86,7 @@ const Posts: NextPage<IProps> = props => {
         <div className="text-xl lg:text-xl font-bold text-typo-title">{postDetail.title}</div>
 
         <div className="text-sm text-typo-paragraphLight flex items-center">
-          {getFormattedDate(postDetail.date)} <PostTypeTag type={postDetail.type} />
+          {getFormattedPostDate(postDetail.date)} <PostTypeTag type={postDetail.type} />
         </div>
 
         <div className="border-b border-gray200 my-4" />

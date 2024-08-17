@@ -10,6 +10,10 @@ export const getRelativeTime = (time: string | number) => {
   return dayjs(time).fromNow()
 }
 
-export const getFormattedDate = (time: string | number) => {
-  return dayjs(new Date(time)).format('ll')
+export const getFormattedPostDate = (date: string) => {
+  const day = date.split('-')[0]
+  const month = date.split('-')[1]
+  const year = date.split('-')[2]
+  const newDate = new Date(`${year}-${month}-${day}`)
+  return dayjs(newDate).format('ll')
 }
