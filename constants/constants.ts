@@ -6,7 +6,7 @@ export const APP_LOGO = {
 export const SOCIAL_ICONS_SRC_MAP = {
   FACEBOOK: '/images/icons/social/facebook.svg',
   GITHUB: '/images/icons/social/github.svg',
-  MAIL: '/images/icons/social/mail.svg',
+  MAIL: '/images/icons/social/email.svg',
   INSTAGRAM: '/images/icons/social/instagram.svg',
   INSTAGRAM_OFFICIAL: '/images/icons/social/instagram-official.svg',
   LINKEDIN: '/images/icons/social/linkedin.svg',

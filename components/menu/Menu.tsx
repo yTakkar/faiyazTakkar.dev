@@ -57,18 +57,25 @@ const PAGE_LINKS = [
 
 const SOCIAL_LINKS = [
   {
-    label: 'GitHub',
-    iconUrl: SOCIAL_ICONS_SRC_MAP.GITHUB,
-    isExternal: true,
-    url: appConfig.global.socialProfiles.gitHub,
-    analyticsEvent: AnalyticsEventType.NAV_SOCIAL_GITHUB,
-  },
-  {
     label: 'LinkedIn',
     iconUrl: SOCIAL_ICONS_SRC_MAP.LINKEDIN,
     isExternal: true,
     url: appConfig.global.socialProfiles.linkedIn,
     analyticsEvent: AnalyticsEventType.NAV_SOCIAL_LINKEDIN,
+  },
+  {
+    label: 'X',
+    iconUrl: SOCIAL_ICONS_SRC_MAP.TWITTER,
+    isExternal: true,
+    url: appConfig.global.socialProfiles.twitter,
+    analyticsEvent: AnalyticsEventType.NAV_SOCIAL_TWITTER,
+  },
+  {
+    label: 'GitHub',
+    iconUrl: SOCIAL_ICONS_SRC_MAP.GITHUB,
+    isExternal: true,
+    url: appConfig.global.socialProfiles.gitHub,
+    analyticsEvent: AnalyticsEventType.NAV_SOCIAL_GITHUB,
   },
   {
     label: 'Instagram',
@@ -77,13 +84,6 @@ const SOCIAL_LINKS = [
     url: appConfig.global.socialProfiles.instagram,
     analyticsEvent: AnalyticsEventType.NAV_SOCIAL_INSTAGRAM,
   },
-  // {
-  //   label: 'Twitter',
-  //   iconUrl: SOCIAL_ICONS_SRC_MAP.TWITTER,
-  //   isExternal: true,
-  //   url: appConfig.global.socialProfiles.twitter,
-  //   analyticsEvent: AnalyticsEventType.NAV_SOCIAL_TWITTER,
-  // },
   {
     label: 'Email',
     iconUrl: SOCIAL_ICONS_SRC_MAP.MAIL,
@@ -97,6 +97,7 @@ interface IMenuProps {}
 
 const MenuContent: React.FC<IMenuProps> = () => {
   const { asPath } = useRouter()
+  const firstPath = asPath.split('/')[1]
 
   return (
     <div>
@@ -111,7 +112,7 @@ const MenuContent: React.FC<IMenuProps> = () => {
               url={pageLink.url}
               className={classnames(
                 'flex items-center transition-all rounded-lg w-full px-4 py-2 mb-1',
-                asPath === pageLink.url ? 'bg-primary hover:bg-primary text-white' : 'hover:bg-gray100'
+                `/${firstPath}` === pageLink.url ? 'bg-primary hover:bg-primary text-white' : 'hover:bg-gray100'
               )}
               onClick={() => {
                 ga('event', pageLink.analyticsEvent)
@@ -123,24 +124,27 @@ const MenuContent: React.FC<IMenuProps> = () => {
         })}
       </div>
 
-      <div className="mt-6 mb-2 text-gray600 ml-4">Let's connect</div>
-      <div>
-        {SOCIAL_LINKS.map(socialLink => {
-          return (
-            <CoreActiveLink
-              key={socialLink.label}
-              url={socialLink.url}
-              className="flex items-center hover:bg-gray100 transition-all rounded-lg w-full px-4 py-2 mb-1"
-              isExternal={socialLink.isExternal}
-              onClick={() => {
-                ga('event', socialLink.analyticsEvent)
-              }}>
-              <CoreImage className="w-5 h-5 mr-2" alt={socialLink.label} url={socialLink.iconUrl} />
-              <span>{socialLink.label}</span>
-              {socialLink.isExternal ? <ExternalLinkIcon className="w-4 h-4 text-gray500 ml-auto" /> : null}
-            </CoreActiveLink>
-          )
-        })}
+      <div className="px-4 lg:absolute bottom-3 lg:w-[90%]">
+        <div className="mt-6 text-gray600 mb-3">Let's connect</div>
+        <div className="flex items-center justify-between mb-4">
+          {SOCIAL_LINKS.map(socialLink => {
+            return (
+              <CoreActiveLink
+                title={socialLink.label}
+                key={socialLink.label}
+                url={socialLink.url}
+                // className="flex items-center hover:bg-gray100 transition-all rounded-lg w-full"
+                isExternal={socialLink.isExternal}
+                onClick={() => {
+                  ga('event', socialLink.analyticsEvent)
+                }}>
+                <CoreImage className="w-6 lg:w-5" alt={socialLink.label} url={socialLink.iconUrl} />
+                {/* <span>{socialLink.label}</span> */}
+                {/* {socialLink.isExternal ? <ExternalLinkIcon className="w-4 h-4 text-gray500 ml-auto" /> : null} */}
+              </CoreActiveLink>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
@@ -181,7 +185,7 @@ interface IMenuDesktopProps extends IMenuProps {}
 
 const MenuDesktop: React.FC<IMenuDesktopProps> = props => {
   return (
-    <aside className="bg-white w-64 border-r border-gray200 h-screen pt-6 pb-10 flex flex-col px-4 fixed">
+    <aside className="bg-white w-[16rem] border-r border-gray200 h-screen pt-6 pb-10 flex flex-col px-4 fixed">
       <MenuContent />
     </aside>
   )
