@@ -3,6 +3,7 @@ export enum PostType {
   PAST_MEMORY = 'past-memory',
   POETRY = 'poetry',
   EXPERIENCE = 'experience',
+  QUOTE = 'quote',
 }
 
 export interface IPostInfo {

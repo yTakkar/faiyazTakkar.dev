@@ -15,9 +15,10 @@ function MarkdownRenderer(props: IMarkdownRendererProps) {
     if (props?.href?.startsWith('mailto:')) {
       return <a {...props} />
     }
+
     return (
       <a {...props} target="_blank" rel="noreferrer noopener">
-        Link
+        {props.children}
       </a>
     )
   }

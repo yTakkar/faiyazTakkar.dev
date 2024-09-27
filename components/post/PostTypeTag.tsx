@@ -6,6 +6,7 @@ export const POST_TYPE_LABEL_MAP: Record<PostType, string> = {
   [PostType.PAST_MEMORY]: 'Past Memory',
   [PostType.POETRY]: 'Poetry',
   [PostType.EXPERIENCE]: 'Experience',
+  [PostType.QUOTE]: 'Quote',
 }
 
 // in hex
@@ -14,6 +15,7 @@ export const POST_TYPE_BG_COLOR_MAP: Record<PostType, string> = {
   [PostType.PAST_MEMORY]: '#FF9800', // Orange
   [PostType.POETRY]: '#FF4081', // Pink
   [PostType.EXPERIENCE]: '#9C27B0', // Purple
+  [PostType.QUOTE]: '#FF5722', // Deep Orange
 }
 
 interface IPostTypeTagProps {

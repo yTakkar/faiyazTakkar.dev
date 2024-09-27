@@ -24,6 +24,13 @@ export const getPostDetailById = (id: string): IPostDetail => {
   }
 }
 
+const getFormattedPostDate = (date: string) => {
+  const day = date.split('-')[0]
+  const month = date.split('-')[1]
+  const year = date.split('-')[2]
+  return new Date(`${year}-${month}-${day}`)
+}
+
 export const listPostInfos = (): IPostInfo[] => {
   const fileNames = fs.readdirSync(postsDirectory)
 
@@ -41,14 +48,9 @@ export const listPostInfos = (): IPostInfo[] => {
         date: postDetail.date,
       }
     })
+    .sort((a, b) => getFormattedPostDate(b.date).getTime() - getFormattedPostDate(a.date).getTime())
 
-  return postInfos.sort((a, b) => {
-    if (new Date(a.date).getTime() < new Date(b.date).getTime()) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  return postInfos
 }
 
 export const listPostIds = (): string[] => {
