@@ -35,12 +35,12 @@ const PAGE_LINKS = [
     url: getIntroPageUrl(),
     analyticsEvent: AnalyticsEventType.NAV_INTRO,
   },
-  {
-    label: 'Posts',
-    icon: PencilAltIcon,
-    url: getPostsPageUrl(),
-    analyticsEvent: AnalyticsEventType.NAV_BLOGS,
-  },
+  // {
+  //   label: 'Posts',
+  //   icon: PencilAltIcon,
+  //   url: getPostsPageUrl(),
+  //   analyticsEvent: AnalyticsEventType.NAV_BLOGS,
+  // },
   {
     label: 'Side Projects',
     icon: ChipIcon,
