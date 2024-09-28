@@ -4,6 +4,7 @@ description: A few dialogues from my mom's favorite movie I found captivating - 
 date: 06-04-2019
 keywords: [Pakeeza, Dialogues, Quotes]
 type: quote
+disabled: false
 ---
 
 A few captivating dialogues from my mom's favorite movie [Pakeeza (1975)](https://www.imdb.com/title/tt0067546/):

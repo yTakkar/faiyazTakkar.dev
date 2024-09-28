@@ -4,7 +4,7 @@ description: A few couplets from Shabeena Adeeb performed at Andaaz-E-Bayaan mus
 date: 30-05-2019
 keywords: [Shabeena Adeeb, Poetry]
 type: poetry
-disabled: false
+disabled: true
 ---
 
 *Khaamosh lab hain, jhuki hai palkein*
