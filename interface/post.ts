@@ -13,6 +13,7 @@ export interface IPostInfo {
   description: string
   keywords: string[]
   date: string
+  disabled: boolean
 }
 
 export interface IPostDetail extends IPostInfo {

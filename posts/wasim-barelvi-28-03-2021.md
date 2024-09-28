@@ -4,6 +4,7 @@ description: A few couplets from Wasim Barelvi's poetry. Collected from differen
 date: 28-03-2021
 keywords: [Wasim Barelvi, Poetry]
 type: poetry
+disabled: false
 ---
 
 *Tum giraane me lage the, Tumne socha hi nahi,*

@@ -1,6 +1,6 @@
 ---
 title: Pakeeza Dialogues
-description: A few dialogues from the Pakeeza movie I found captivating.
+description: A few dialogues from my mom's favorite movie I found captivating - Pakeeza (1975).
 date: 06-04-2019
 keywords: [Pakeeza, Dialogues, Quotes]
 type: quote

@@ -14,7 +14,7 @@ const appConfig = {
     emailAddress: 'www.shtakkar@gmail.com',
     birthDate: '1998-09-09',
     socialProfiles: {
-      twitter: 'https://twitter.com/shtakkar',
+      twitter: 'https://x.com/fyzmind',
       instagram: 'https://www.instagram.com/faiyaztakkarrr/',
       gitHub: 'https://github.com/yTakkar',
       linkedIn: 'https://www.linkedin.com/in/faiyaz-s-413450118/',

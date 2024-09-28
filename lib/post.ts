@@ -21,6 +21,7 @@ export const getPostDetailById = (id: string): IPostDetail => {
     keywords: matterResult.data.keywords,
     date: matterResult.data.date,
     content: matterResult.content,
+    disabled: matterResult.data.disabled || false,
   }
 }
 
@@ -46,8 +47,10 @@ export const listPostInfos = (): IPostInfo[] => {
         description: postDetail.description,
         keywords: postDetail.keywords,
         date: postDetail.date,
+        disabled: postDetail.disabled,
       }
     })
+    .filter(post => !post.disabled)
     .sort((a, b) => getFormattedPostDate(b.date).getTime() - getFormattedPostDate(a.date).getTime())
 
   return postInfos
