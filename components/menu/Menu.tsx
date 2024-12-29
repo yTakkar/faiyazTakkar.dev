@@ -35,6 +35,12 @@ const PAGE_LINKS = [
     url: getIntroPageUrl(),
     analyticsEvent: AnalyticsEventType.NAV_INTRO,
   },
+  {
+    label: 'Work',
+    icon: BriefcaseIcon,
+    url: getWorkPageUrl(),
+    analyticsEvent: AnalyticsEventType.NAV_WORK,
+  },
   // {
   //   label: 'Posts',
   //   icon: PencilAltIcon,
@@ -46,12 +52,6 @@ const PAGE_LINKS = [
     icon: ChipIcon,
     url: getSideProjectsPageUrl(),
     analyticsEvent: AnalyticsEventType.NAV_SIDE_PROJECTS,
-  },
-  {
-    label: 'Work',
-    icon: BriefcaseIcon,
-    url: getWorkPageUrl(),
-    analyticsEvent: AnalyticsEventType.NAV_WORK,
   },
 ]
 

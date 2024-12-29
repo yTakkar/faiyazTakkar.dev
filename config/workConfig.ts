@@ -1,7 +1,7 @@
 const workConfig = {
   list: [
     {
-      role: 'Member of Technical Staff',
+      role: 'Builder',
       company: {
         name: 'Kognitos',
         logo: '/images/logos/kognitos_logo.jpeg',
@@ -43,10 +43,10 @@ const workConfig = {
         total: '1 yr 6 mos',
       },
       highlights: [
-        `Parent organization of the world's largest cricket platform.`,
-        `Joined ESPN as an independent consultant for ESPNcricinfo.`,
+        `Was part of the early core team to rebuild ESPNcricinfo from the ground up to support 100m visitors per month.`,
         `Worked with ESPN, Disney and Hotstar teams globally.`,
-        `Core contributor to ESPNcricinfo from development to deployment.`,
+        `Core contributor from development to deployment.`,
+        `Helped re-architect the entire stack (UI, BE, Ops, Legacy, CMS, Native apps).`,
         `Took ownership of legacy codebases too.`,
       ],
     },
@@ -72,11 +72,7 @@ const workConfig = {
         to: 'Oct 2020',
         total: '10 mos',
       },
-      highlights: [
-        `Proximity's first employee. Founding team member.`,
-        `Joined to help rewrite ESPNcricinfo from the ground up.`,
-        `Lead core development of ESPNcricinfo.`,
-      ],
+      highlights: [`Part of Proximity since day 0 to help rewrite ESPNcricinfo from the ground up.`],
     },
     {
       role: 'Software Consultant',

@@ -16,19 +16,6 @@ const Intro: NextPage<IProps> = props => {
       <div className="px-5 md:px-10 pb-20">
         <div className="text-2xl font-bold text-typo-title">Detailed introduction</div>
 
-        <p className="mt-6">
-          At 12,{' '}
-          <CoreLink
-            url="https://www.youtube.com/watch?v=mB2V0BXH608&list=PLuwBxoTBSqUCKf0BXlR5EUullDyzStVK0"
-            className="border-dashed border-b border-funBlue text-funBlue"
-            isExternal>
-            Bloomberg documentaries
-          </CoreLink>{' '}
-          about different tech companies and their founders inspired me to learn programming and eventually launch tech
-          products of my own. YouTube helped me fuel my programming journey. Philosophy and literature helped me
-          navigate better.
-        </p>
-
         <p className="mt-5">
           A college dropout, born and raised in{' '}
           <CoreLink
@@ -37,21 +24,8 @@ const Intro: NextPage<IProps> = props => {
             isExternal>
             Dharavi
           </CoreLink>{' '}
-          (India's largest slum). Started my professional jouney by working at a small-scale Jeans factory for almost a
-          year when I was 17/18. After some stability, I began working on full-stack web applications for learning.
-          Developed various projects with different tech stacks and open-sourced them all. Continued doing this for more
-          than 2 years.
-        </p>
-
-        <p className="mt-5">
-          Got my first job offer as a front-end developer from People Interactive (shaadi.com) when I was 19. At the
-          moment, I'm a member of Kognitos' technical staff. Learn more about my work experience in detail{' '}
-          <CoreLink
-            url={getWorkPageUrl()}
-            className="border-dashed border-b border-funBlue text-funBlue inline-flex items-center">
-            here <BriefcaseIcon className="w-5 ml-1" />
-          </CoreLink>
-          .
+          (India's largest slum). Intested in tech, literature and entrepreneurship since the age of 12. Started my
+          professional jouney by working at a small-scale Jeans factory when I was 17/18.
         </p>
 
         <p className="mt-5">My other interests include literature, history and philosophy.</p>
